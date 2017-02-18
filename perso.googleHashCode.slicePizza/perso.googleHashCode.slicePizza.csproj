@@ -41,8 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="inputObject.cs" />
-    <Compile Include="outputObject.cs" />
+    <Compile Include="Business\BasicAlgorithm.cs" />
+    <Compile Include="Business\IAlgorithm.cs" />
+    <Compile Include="Business\MoreComplexAlgorithm.cs" />
+    <Compile Include="Business\SlicingTools.cs" />
+    <Compile Include="DTO\InputObject.cs" />
+    <Compile Include="DTO\OutputObject.cs" />
     <Compile Include="slicePizza.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

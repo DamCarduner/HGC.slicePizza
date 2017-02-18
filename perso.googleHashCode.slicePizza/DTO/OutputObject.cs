@@ -7,18 +7,25 @@ using System.Threading.Tasks;
 
 namespace perso.googleHashCode.slicePizza
 {
-    public class outputObject
+    public class OutputObject
     {
         public int nbSlices;
         public List<int[]> slices;
 
-        public outputObject()
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public OutputObject()
         {
             nbSlices = 0;
             slices = new List<int[]>();
         }
 
-        public void write(StreamWriter file)
+        /// <summary>
+        /// Write file from output object
+        /// </summary>
+        /// <param name="file"></param>
+        public void Write(StreamWriter file)
         {
             file.WriteLine(nbSlices);
             foreach (int[] slice in slices)

@@ -20,22 +20,39 @@ namespace perso.googleHashCode.slicePizza
         {
             foreach (string file in inFiles)
             {
+                Console.WriteLine(string.Format("Read first file : {0}", file));
                 string fileOutName = file.Split('\\').Last().Split('.').First() + ".out";
-                inputObject inputObject = null;
-                outputObject outputObject = null;
+                InputObject inputObject = null;
+                OutputObject outputObject = null;
+
+
                 // Read file an read and put them inside c# object
                 using(var streamReader = new StreamReader(@file)) 
                 {
-                    inputObject = new inputObject(streamReader);
+                    inputObject = new InputObject(streamReader);
                 }
 
-                outputObject = inputObject.executeAlgorithm();
+                // Now we want to execute all known algorithm
+                List<IAlgorithm> algorithms = new List<IAlgorithm>();
+                algorithms.Add(new BasicAlgorithm());
+                algorithms.Add(new MoreComplexAlgorithm());
 
-                // Write file from c# object
-                using (var streamWriter = new StreamWriter(outPath + fileOutName))
+                foreach (IAlgorithm algorithm in algorithms)
                 {
-                    outputObject.write(streamWriter);
+                    Console.WriteLine(string.Format("Apply algorithm : {0} on this file", algorithm.GetName()));
+                    outputObject = algorithm.Execute(inputObject);
+
+                    if (!Directory.Exists(outPath + algorithm.GetName())) ;
+                    {
+                        Directory.CreateDirectory(outPath + algorithm.GetName());
+                    }
+                    // Write file from c# object
+                    using (var streamWriter = new StreamWriter(outPath + algorithm.GetName() + "\\" + fileOutName))
+                    {
+                        outputObject.Write(streamWriter);
+                    }
                 }
+                Console.WriteLine();
             }
         }
     }
