@@ -19,7 +19,7 @@ namespace perso.googleHashCode.slicePizza
         }
 
         /// <summary>
-        /// One simple algorithm
+        /// One more complex algorithm
         /// </summary>
         /// <param name="inputObject"></param>
         /// <returns></returns>
@@ -50,12 +50,12 @@ namespace perso.googleHashCode.slicePizza
                             {
                                 for (int y = j; y < j + rectangle[1]; y++)
                                 {
-                                    inputObject.Pizza[x][y] = 'X';
+                                    inputObject.Pizza[x][y] = 'O';
                                 }
                             }
-                            result.nbSlices++;
+                            result.NbSlices++;
                             int[] coordonne = { i, j, i + rectangle[0] - 1, j + rectangle[1] - 1 };
-                            result.slices.Add(coordonne);
+                            result.Slices.Add(coordonne);
                         }
                     }
                     if (!hasOneValidSlice)
@@ -68,7 +68,9 @@ namespace perso.googleHashCode.slicePizza
             return result;
         }
 
-
+        /// <summary>
+        /// Class allowing to sort rectangles
+        /// </summary>
         public class rectangleComparer : Comparer<int[]>
         {
             //Compare by area

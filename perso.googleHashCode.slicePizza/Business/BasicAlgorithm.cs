@@ -47,12 +47,12 @@ namespace perso.googleHashCode.slicePizza
                             {
                                 for (int y = j; y < j + rectangle[1]; y++)
                                 {
-                                    inputObject.Pizza[x][y] = 'X';
+                                    inputObject.Pizza[x][y] = 'O';
                                 }
                             }
-                            result.nbSlices++;
+                            result.NbSlices++;
                             int[] coordonne = { i, j, i + rectangle[0] - 1, j + rectangle[1] - 1 };
-                            result.slices.Add(coordonne);
+                            result.Slices.Add(coordonne);
                         }
                     }
                     if (!hasOneValidSlice)

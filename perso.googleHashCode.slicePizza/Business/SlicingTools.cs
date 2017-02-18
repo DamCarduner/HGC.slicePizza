@@ -70,5 +70,21 @@ namespace perso.googleHashCode.slicePizza
 
             return valid;
         }
+
+        /// <summary>
+        /// Allow to compute number of point
+        /// </summary>
+        /// <param name="outputObject"></param>
+        /// <returns></returns>
+        public static int GetNbPoint(OutputObject outputObject)
+        {
+            int result = 0;
+            foreach (int[] slice in outputObject.Slices)
+            {
+                result += (slice[2] - slice[0] + 1) * (slice[3] - slice[1] + 1);
+            }
+
+            return result;
+        }
     }
 }

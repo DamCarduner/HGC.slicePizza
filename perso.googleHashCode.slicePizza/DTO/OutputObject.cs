@@ -9,16 +9,19 @@ namespace perso.googleHashCode.slicePizza
 {
     public class OutputObject
     {
-        public int nbSlices;
-        public List<int[]> slices;
+        public int NbSlices { get; set; }
+        public List<int[]> Slices { get; set; }
+
+        public int NbPoint { get; set; }
 
         /// <summary>
         /// Constructor
         /// </summary>
         public OutputObject()
         {
-            nbSlices = 0;
-            slices = new List<int[]>();
+            NbSlices = 0;
+            NbPoint = 0;
+            Slices = new List<int[]>();
         }
 
         /// <summary>
@@ -27,8 +30,8 @@ namespace perso.googleHashCode.slicePizza
         /// <param name="file"></param>
         public void Write(StreamWriter file)
         {
-            file.WriteLine(nbSlices);
-            foreach (int[] slice in slices)
+            file.WriteLine(NbSlices);
+            foreach (int[] slice in Slices)
             {
                 file.WriteLine(string.Format("{0} {1} {2} {3}", slice[0], slice[1], slice[2], slice[3]));
             }

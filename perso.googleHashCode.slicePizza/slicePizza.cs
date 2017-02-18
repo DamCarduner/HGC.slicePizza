@@ -41,6 +41,7 @@ namespace perso.googleHashCode.slicePizza
 
                     Console.WriteLine(string.Format("Apply algorithm : {0} on this file", algorithm.GetName()));
                     outputObject = algorithm.Execute(inputObject);
+                    Console.WriteLine(string.Format("{0} point with this algorithm", SlicingTools.GetNbPoint(outputObject)));
 
                     if (!Directory.Exists(outPath + algorithm.GetName()))
                     {
