@@ -11,10 +11,10 @@
 
 | File input    | Slices        | Point |
 | ------------- |:-------------:| -----:|
-| Example       | 2             |      8|
-| Small         | 8             |     35|
-| Medium        | 4030          |  47824|
-| Big           | 63321         | 887599|
+| Example       | 3             |      8|
+| Small         | 15            |     35|
+| Medium        | 5019          |  47824|
+| Big           | 67167         | 887599|
 
 # Result with descending sorted algorithm
 
@@ -29,4 +29,4 @@
 
 # Conclusion
 
-My basic algorithm seems to be the better one for given exemples !
+My basic algorithm seems to be the better one for given examples !
