@@ -23,3 +23,6 @@ obj/
 [Bb]in
 [Dd]ebug*/
 [Rr]elease*/
+
+#project files
+*.out
