@@ -9,7 +9,7 @@ namespace perso.googleHashCode.slicePizza
 {
     public class slicePizza
     {
-        public static string path = @"C:\Users\CARDUNER\Desktop\hashcode\";
+        public static string path = @"..\..\..\material\";
 
         public static string dataPath = path + @"data\";
         public static string[] inFiles = Directory.GetFiles(dataPath);
