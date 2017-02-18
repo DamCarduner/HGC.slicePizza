@@ -25,8 +25,6 @@ namespace perso.googleHashCode.slicePizza
         /// <returns></returns>
         public OutputObject Execute(InputObject inputObject)
         {
-
-            OutputObject result = new OutputObject();
             int minCell = 2 * inputObject.MinIngredient;
 
             // we want to find all rectangle whose area is between mincell and 
