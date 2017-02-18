@@ -63,7 +63,7 @@ namespace perso.googleHashCode.slicePizza
                 }
             }
 
-            if (nbMush < 2 * inputObject.MinIngredient || nbTomate < 2 * inputObject.MinIngredient)
+            if (nbMush < inputObject.MinIngredient || nbTomate < inputObject.MinIngredient)
             {
                 valid = false;
             }

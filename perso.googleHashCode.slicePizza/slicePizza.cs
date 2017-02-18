@@ -34,7 +34,7 @@ namespace perso.googleHashCode.slicePizza
 
                 // Now we want to execute all known algorithm
                 List<IAlgorithm> algorithms = new List<IAlgorithm>();
-                algorithms.Add(new BasicAlgorithm());
+                //algorithms.Add(new BasicAlgorithm());
                 algorithms.Add(new MoreComplexAlgorithm());
 
                 foreach (IAlgorithm algorithm in algorithms)
@@ -42,7 +42,7 @@ namespace perso.googleHashCode.slicePizza
                     Console.WriteLine(string.Format("Apply algorithm : {0} on this file", algorithm.GetName()));
                     outputObject = algorithm.Execute(inputObject);
 
-                    if (!Directory.Exists(outPath + algorithm.GetName())) ;
+                    if (!Directory.Exists(outPath + algorithm.GetName()))
                     {
                         Directory.CreateDirectory(outPath + algorithm.GetName());
                     }

@@ -31,6 +31,8 @@ namespace perso.googleHashCode.slicePizza
 
             // we want to find all rectangle whose area is between mincell and 
             List<int[]> allRectangles = SlicingTools.getAllRectangles(minCell, inputObject.MaxCell);
+            allRectangles.Sort(new rectangleComparer());
+            allRectangles.Reverse();
 
             // now we cross pizza, we start at the left top
 
@@ -41,7 +43,7 @@ namespace perso.googleHashCode.slicePizza
                     bool hasOneValidSlice = false;
                     foreach (int[] rectangle in allRectangles)
                     {
-                        if (SlicingTools.IsValidSlice(i, j, rectangle, inputObject))
+                        if (SlicingTools.IsValidSlice(i, j, rectangle, inputObject) && !hasOneValidSlice)
                         {
                             hasOneValidSlice = true;
                             for (int x = i; x < i + rectangle[0]; x++)
@@ -66,5 +68,21 @@ namespace perso.googleHashCode.slicePizza
             return result;
         }
 
+
+        public class rectangleComparer : Comparer<int[]>
+        {
+            //Compare by area
+            public override int Compare(int[] first, int[] second)
+            {
+                if ((first[0] * first[1]).CompareTo(second[0] * second[1]) != 0)
+                {
+                    return (first[0] * first[1]).CompareTo(second[0] * second[1]);
+                }
+                else
+                {
+                    return 0;
+                }
+            }
+        }
     }
 }

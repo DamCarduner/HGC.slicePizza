@@ -40,7 +40,7 @@ namespace perso.googleHashCode.slicePizza
                     bool hasOneValidSlice = false;
                     foreach(int[] rectangle in allRectangles)
                     {
-                        if (SlicingTools.IsValidSlice(i, j, rectangle, inputObject))
+                        if (SlicingTools.IsValidSlice(i, j, rectangle, inputObject) && !hasOneValidSlice)
                         {
                             hasOneValidSlice = true;
                             for (int x = i; x < i + rectangle[0]; x++)

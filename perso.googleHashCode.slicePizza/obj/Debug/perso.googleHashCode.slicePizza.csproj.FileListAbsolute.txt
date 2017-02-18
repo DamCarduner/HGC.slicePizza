@@ -3,3 +3,4 @@ D:\wwwroot\slicePizza\perso.googleHashCode.slicePizza\bin\Debug\perso.googleHash
 D:\wwwroot\slicePizza\perso.googleHashCode.slicePizza\bin\Debug\perso.googleHashCode.slicePizza.pdb
 D:\wwwroot\slicePizza\perso.googleHashCode.slicePizza\obj\Debug\perso.googleHashCode.slicePizza.exe
 D:\wwwroot\slicePizza\perso.googleHashCode.slicePizza\obj\Debug\perso.googleHashCode.slicePizza.pdb
+D:\wwwroot\slicePizza\perso.googleHashCode.slicePizza\obj\Debug\perso.googleHashCode.slicePizza.csprojResolveAssemblyReference.cache
