@@ -1,12 +1,21 @@
-# HGC.slicePizza
 
-# Result
-
-Exemple : 3 parts
-Small : 13 parts
-Medium : 4926 parts
-big : 67725 parts
+# Result with basic algorithm 
 
 
-# TODO
-Il est possible d'améliorer l'algo en priosant la recherche des plus grandes part de pizza
+| File input    | Slices        | Point |
+| ------------- |:-------------:| -----:|
+| Example       | 3             |     10|
+| Small         | 13            |     35|
+| Medium        | 4926          |      ?|
+| Big           | 67725         |      ?|
+
+
+
+# Result with more complex algorithm
+
+| File input    | Slices        | Point |
+| ------------- |:-------------:| -----:|
+| Example       | 2             |     12|
+| Small         | 8             |     40|
+| Medium        | 4030          |      ?|
+| Big           | 63321         |      ?|

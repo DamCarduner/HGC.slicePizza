@@ -20,17 +20,10 @@ namespace perso.googleHashCode.slicePizza
         {
             foreach (string file in inFiles)
             {
-                Console.WriteLine(string.Format("Read first file : {0}", file));
-                string fileOutName = file.Split('\\').Last().Split('.').First() + ".out";
+                Console.WriteLine(string.Format("Read file : {0}", file));
+                
                 InputObject inputObject = null;
                 OutputObject outputObject = null;
-
-
-                // Read file an read and put them inside c# object
-                using(var streamReader = new StreamReader(@file)) 
-                {
-                    inputObject = new InputObject(streamReader);
-                }
 
                 // Now we want to execute all known algorithm
                 List<IAlgorithm> algorithms = new List<IAlgorithm>();
@@ -39,6 +32,13 @@ namespace perso.googleHashCode.slicePizza
 
                 foreach (IAlgorithm algorithm in algorithms)
                 {
+                    string fileOutName = file.Split('\\').Last().Split('.').First() + ".out";
+                    // Read file an read and put them inside c# object
+                    using (var streamReader = new StreamReader(@file))
+                    {
+                        inputObject = new InputObject(streamReader);
+                    }
+
                     Console.WriteLine(string.Format("Apply algorithm : {0} on this file", algorithm.GetName()));
                     outputObject = algorithm.Execute(inputObject);
 
