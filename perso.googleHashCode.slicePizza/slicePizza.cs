@@ -28,7 +28,8 @@ namespace perso.googleHashCode.slicePizza
                 // Now we want to execute all known algorithm
                 List<IAlgorithm> algorithms = new List<IAlgorithm>();
                 algorithms.Add(new BasicAlgorithm());
-                algorithms.Add(new MoreComplexAlgorithm());
+                algorithms.Add(new SortAscendingAlgorithm());
+                algorithms.Add(new SortDescendingAlgorithm());
 
                 foreach (IAlgorithm algorithm in algorithms)
                 {

@@ -42,9 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\BasicAlgorithm.cs" />
+    <Compile Include="Business\SortAscendingAlgorithm.cs" />
     <Compile Include="Business\IAlgorithm.cs" />
-    <Compile Include="Business\MoreComplexAlgorithm.cs" />
-    <Compile Include="Business\SlicingTools.cs" />
+    <Compile Include="Business\SortDescendingAlgorithm.cs" />
+    <Compile Include="Tools\RectangleComparer.cs" />
+    <Compile Include="Tools\SlicingAlgorithm.cs" />
+    <Compile Include="Tools\SlicingTools.cs" />
     <Compile Include="DTO\InputObject.cs" />
     <Compile Include="DTO\OutputObject.cs" />
     <Compile Include="slicePizza.cs" />

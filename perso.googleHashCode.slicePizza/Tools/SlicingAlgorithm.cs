@@ -6,42 +6,27 @@ using System.Threading.Tasks;
 
 namespace perso.googleHashCode.slicePizza
 {
-    public class MoreComplexAlgorithm : IAlgorithm
+    public static class SlicingAlgorithm
     {
 
         /// <summary>
-        /// basic algorithm name
-        /// </summary>
-        /// <returns></returns>
-        public string GetName()
-        {
-            return "moreComplexeAlgorithm";
-        }
-
-        /// <summary>
-        /// One more complex algorithm
+        /// One possible algorithm to execute. It crosse pizza from top left to bottom right
+        /// Result depend of the order of given rectangles
         /// </summary>
         /// <param name="inputObject"></param>
+        /// <param name="rectangles"></param>
         /// <returns></returns>
-        public OutputObject Execute(InputObject inputObject)
+        public static OutputObject Execute(InputObject inputObject, List<int[]> rectangles)
         {
 
             OutputObject result = new OutputObject();
-            int minCell = 2 * inputObject.MinIngredient;
-
-            // we want to find all rectangle whose area is between mincell and 
-            List<int[]> allRectangles = SlicingTools.getAllRectangles(minCell, inputObject.MaxCell);
-            allRectangles.Sort(new rectangleComparer());
-            allRectangles.Reverse();
-
             // now we cross pizza, we start at the left top
-
             for (int i = 0; i < inputObject.NbRow; i++)
             {
                 for (int j = 0; j < inputObject.NbCol; j++)
                 {
                     bool hasOneValidSlice = false;
-                    foreach (int[] rectangle in allRectangles)
+                    foreach (int[] rectangle in rectangles)
                     {
                         if (SlicingTools.IsValidSlice(i, j, rectangle, inputObject) && !hasOneValidSlice)
                         {
@@ -66,25 +51,6 @@ namespace perso.googleHashCode.slicePizza
             }
 
             return result;
-        }
-
-        /// <summary>
-        /// Class allowing to sort rectangles
-        /// </summary>
-        public class rectangleComparer : Comparer<int[]>
-        {
-            //Compare by area
-            public override int Compare(int[] first, int[] second)
-            {
-                if ((first[0] * first[1]).CompareTo(second[0] * second[1]) != 0)
-                {
-                    return (first[0] * first[1]).CompareTo(second[0] * second[1]);
-                }
-                else
-                {
-                    return 0;
-                }
-            }
         }
     }
 }

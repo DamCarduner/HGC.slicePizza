@@ -1,6 +1,4 @@
-
 # Result with basic algorithm 
-
 
 | File input    | Slices        | Point |
 | ------------- |:-------------:| -----:|
@@ -9,9 +7,16 @@
 | Medium        | 4926          |  48649|
 | Big           | 67725         | 893879|
 
+# Result with ascending sorted algorithm
 
+| File input    | Slices        | Point |
+| ------------- |:-------------:| -----:|
+| Example       | 2             |      8|
+| Small         | 8             |     35|
+| Medium        | 4030          |  47824|
+| Big           | 63321         | 887599|
 
-# Result with more complex algorithm
+# Result with descending sorted algorithm
 
 | File input    | Slices        | Point |
 | ------------- |:-------------:| -----:|
@@ -19,6 +24,8 @@
 | Small         | 8             |     40|
 | Medium        | 4030          |  48254|
 | Big           | 63321         | 884969|
+
+
 
 # Conclusion
 

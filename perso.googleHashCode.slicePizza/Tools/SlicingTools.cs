@@ -14,7 +14,7 @@ namespace perso.googleHashCode.slicePizza
         /// <param name="minCell"></param>
         /// <param name="maxCell"></param>
         /// <returns></returns>
-        public static List<int[]> getAllRectangles(int minCell, int maxCell)
+        public static List<int[]> GetAllRectangles(int minCell, int maxCell)
         {
             List<int[]> rectangles = new List<int[]>();
             for (int i = 0; i <= maxCell; i++)
@@ -83,8 +83,9 @@ namespace perso.googleHashCode.slicePizza
             {
                 result += (slice[2] - slice[0] + 1) * (slice[3] - slice[1] + 1);
             }
-
             return result;
         }
+
+        
     }
 }
